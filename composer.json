@@ -1,0 +1,19 @@
+{
+    "name": "maximgrynykha/metamorfosi-tt",
+    "description": "Junior PHP developer",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Maximgrynykha\\MetamorfosiTt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maxim Grynykha",
+            "email": "maximgrynykha@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
