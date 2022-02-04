@@ -3,17 +3,28 @@
     "description": "Test task on position: Junior PHP developer",
     "type": "project",
     "license": "MIT",
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "maximgrynykha/path2": "^1.1"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.0"
+    },
     "autoload": {
+        "files": [
+            "app/Support/helpers.php"
+        ],
         "psr-4": {
-            "Maximgrynykha\\MetamorfosiTt\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [
         {
             "name": "Maxim Grynykha",
-            "email": "maximgrynykha@gmail.com"
+            "email": "maximgrynykha@gmail.com",
+            "homepage": "https://github.com/maximgrynykha"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

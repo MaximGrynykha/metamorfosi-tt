@@ -1,0 +1,48 @@
+## comments
+#  commented directives
+
+## -----------------------------
+## Disable magic quotes
+
+php_flag magic_quotes_gpc     0
+php_flag magic_quotes_runtime 0
+
+## -----------------------------
+## Turn on URL rewritig
+
+RewriteEngine on
+
+## -----------------------------
+## Installation directory
+
+RewriteBase /
+
+## -----------------------------
+## Allow any files or directories that exists to be displayed directory
+## RewriteCond - Exclusion rule for rewriting URLs 
+
+RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+
+## -----------------------------
+## Rewrite all other URLs to index.php/URL
+
+RewriteRule .* index.php [QSA]
+
+## -----------------------------
+## Charset and language settings
+
+DefaultLanguage ru
+AddDefaultCharset utf-8
+
+## -----------------------------
+## Permission or prohibition for access to files 
+## Order: allow / deny from all
+
+<FilesMatch "\.(php)$">
+	Deny from all
+</FilesMatch>
+
+<FilesMatch "index.(php)$">
+	Allow from all
+</FilesMatch>

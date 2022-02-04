@@ -1,0 +1,11 @@
+# Dirs
+/.vscode
+/.idea
+/vendor
+/node_modules
+
+# Dotfiles
+.env
+
+# Regular files
+composer.lock
