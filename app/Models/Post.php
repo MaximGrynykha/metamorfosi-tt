@@ -56,24 +56,24 @@ class Post extends Model
     }
 
     /**
+     * TODO
+     * 
      * @param array $attrs
      * 
      * @return int 
      */
-    public function update(array $attrs): int
-    {
-        $post_id = $this->repository->update('posts', [
-            'title' => $attrs['title'],
-            'content' => $attrs['content']
-        ], sprintf('id = %s', $attrs['id']));
+    // public function update(array $attrs): int
+    // {
+    //     $post_id = $this->repository->update('posts', [
+    //         'title' => $attrs['title'],
+    //         'content' => $attrs['content']
+    //     ], sprintf('id = %s', $attrs['id']));
 
-        dd($post_id);
-
-        return $this->repository->insert('category_post', [
-            'category_id' => $attrs['category'],
-            'post_id' => $post_id
-        ]);
-    }
+    //     return $this->repository->insert('category_post', [
+    //         'category_id' => $attrs['category'],
+    //         'post_id' => $post_id
+    //     ]);
+    // }
 
     /** 
      * @return array
